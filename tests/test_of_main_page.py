@@ -1,5 +1,3 @@
-import time
-
 class TestMainPage:
     
     def test_main_page_loads(self, main_page):
@@ -23,5 +21,4 @@ class TestMainPage:
     def test_footer_has_features_link(self, main_page):
         """TC-05"""
         main_page.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(1)
-        assert main_page.is_visible(main_page.FOOTER_FEATURES), "Ссылка Features не найдена в футере"
+        assert main_page.is_visible(main_page.FOOTER_FEATURES)

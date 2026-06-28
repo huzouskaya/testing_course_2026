@@ -20,3 +20,6 @@ class LoginPage(BasePage):
     
     def get_error_message_text(self):
         return self.get_text(self.ERROR_MESSAGE)
+    
+    def is_error_message_visible(self):
+        return self.is_visible(self.ERROR_MESSAGE)
