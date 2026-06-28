@@ -5,7 +5,7 @@ class LoginPage(BasePage):
     EMAIL_INPUT = (By.CSS_SELECTOR, "input[name='email']")
     PASSWORD_INPUT = (By.CSS_SELECTOR, "input[name='password']")
     LOGIN_FORM_BUTTON = (By.CSS_SELECTOR, "button[type='submit']")
-    ERROR_MESSAGE = (By.XPATH, "//div[contains(@role, 'alert')]")
+    ERROR_MESSAGE = (By.XPATH, "//div[contains(@class, 'error') or contains(@role, 'alert')]")
     COOKIE_ACCEPT_BUTTON = (By.XPATH, "//button[contains(text(), 'Accept') or contains(text(), 'OK')]")
     
     def accept_cookies(self):

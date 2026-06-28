@@ -4,7 +4,7 @@ from pages.base_page import BasePage
 from selenium.webdriver.common.keys import Keys
 
 class TemplatesPage(BasePage):
-    SEARCH_INPUT = (By.XPATH, "//input[@type='search']")
+    SEARCH_INPUT = (By.CSS_SELECTOR, "#algolia-search")
     PROJECT_REPORT_CARD = (By.XPATH, "//a[contains(@href, 'report')]")
     SEARCH_RESULTS = (By.XPATH, "//div[contains(@class, 'card')]")
     

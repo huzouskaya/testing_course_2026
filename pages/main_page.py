@@ -7,8 +7,7 @@ class MainPage(BasePage):
     REGISTER_BUTTON = (By.CSS_SELECTOR, "a[href='/register']")
     LOGIN_BUTTON = (By.CSS_SELECTOR, "a[href='/login']")
     TEMPLATES_LINK = (By.XPATH, "//a[contains(@href, '/templates')]")
-    HERO_TITLE = (By.XPATH, "//h1[contains(text(), 'Write like a rocket scientist')]")
-    HERO_TITLE_ALT = (By.XPATH, "//h1[contains(text(), 'Overleaf')]")
+    HERO_TITLE = (By.XPATH, "//h1[contains(@class, 'home-top-text')]")
     FOOTER_FEATURES = (By.XPATH, "//footer//a[contains(text(), 'Careers')]")
     
     def get_hero_title_text(self):
